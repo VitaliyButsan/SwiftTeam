@@ -1,15 +1,14 @@
 // The Declaration of arrays.
 var numbersArray = [2, 3, -3, 15, 25, 0, 32, 0, -8, 17]
 var positiveArray: [Int] = []
-let del = 0
 
 
 for numbers in numbersArray {
     
     switch numbers {
             // Removing of zeros.
-        case del:
-            if let ind = numbersArray.index(of: del){
+        case 0:
+            if let ind = numbersArray.index(of: numbers){
                 numbersArray.remove(at: ind)
             }
             // The output negatives numbers in the console.
