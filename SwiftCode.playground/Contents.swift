@@ -2,15 +2,12 @@
 var numbersArray = [2, 3, -3, 15, 25, 0, 32, 0, -8, 17]
 var positiveArray: [Int] = []
 
-
 for numbers in numbersArray {
     
     switch numbers {
             // Removing of zeros.
         case 0:
-            if let ind = numbersArray.index(of: numbers){
-                numbersArray.remove(at: ind)
-            }
+            numbersArray.remove(at: numbersArray.index(of: numbers)!)
             // The output negatives numbers in the console.
         case ...(-1):
             print(numbers)
