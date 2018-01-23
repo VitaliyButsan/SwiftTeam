@@ -24,4 +24,11 @@ print(numbersArray)
 print(positiveArray)
 
 
+// Second task
+
+//Есть словарь - dictionary, где ключом является имя, а значением возраст.
+let dictionary = ["John": 34, "Alex": 31, "Max": 24, "Jason": 27, "Jeremy": 29]
+
+// Создать пустой массив строк и поместить туда имена из dictionary возраст которых до 30 лет. Вывести массив принтом в консоль.
+
 
