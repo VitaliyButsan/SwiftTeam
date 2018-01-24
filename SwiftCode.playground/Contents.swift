@@ -26,5 +26,6 @@ for numbers in numbersArray {
 print(numbersArray)
 print(positiveArray)
 
+// Создать пустой массив строк и поместить туда имена из dictionary возраст которых до 30 лет. Вывести массив принтом в консоль.
 
 
