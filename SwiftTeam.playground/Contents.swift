@@ -1,7 +1,7 @@
 // Second task.
 
 //Есть словарь - dictionary, где ключом является имя, а значением возраст.
-let portfolio = ["John": 34, "Alex": 31, "Max": 24, "Jason": 27, "Jeremy": 29]
+let portfolio = ["Ket": 19, "John": 34, "Alex": 31, "Max": 24, "Vit": 33, "Jason": 27, "Jeremy": 29, "Pasha": 37]
 var peopleArray: [String] = []
 let maxAge = 30
 
