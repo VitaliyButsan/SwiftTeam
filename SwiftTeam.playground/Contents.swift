@@ -100,7 +100,7 @@ whiteHouse.quadrature = 650.45
 // output
 print(whiteHouse)
 
-// Memerial "Lenin" + building "White House"
+// не созданный объект структуры Memorial "Lenin" + объект структуры House "whiteHouse" == объект класса Buildings "leninHouse"
 var leninHouse = Buildings()
 leninHouse.house = whiteHouse()
 
