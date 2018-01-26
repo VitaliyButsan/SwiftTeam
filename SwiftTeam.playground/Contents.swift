@@ -1,3 +1,4 @@
+
 //// Second task.
 //
 ////Есть словарь - dictionary, где ключом является имя, а значением возраст.
@@ -23,34 +24,34 @@
 // ===========================================================================
 
 
-struct Sprint {
-    var name: String
-    var age: Int
-    var result: Float
-    
-    mutating func changeResult(result: Float){
-        self.result = result
-    }
-    mutating func changeName(name: String){
-        self.name = name
-    }
-    mutating func changeAge(age: Int){
-        self.age = age
-    }
-    
-}
-
-var rex = Sprint(name: "Rex", age: 18, result: 8.98)
-print(rex.age)
-print(rex.result)
-print(rex.name)
-rex.changeResult(result: 8.88)
-rex.changeName(name: "Ivan")
-rex.changeAge(age: -273)
-print(rex)
-
-var felix = Sprint(name: "Felix", age: -1, result: 9.999)
-print(felix)
+//struct Sprint {
+//    var name: String
+//    var age: Int
+//    var result: Float
+//
+//    mutating func changeResult(result: Float){
+//        self.result = result
+//    }
+//    mutating func changeName(name: String){
+//        self.name = name
+//    }
+//    mutating func changeAge(age: Int){
+//        self.age = age
+//    }
+//
+//}
+//
+//var rex = Sprint(name: "Rex", age: 18, result: 8.98)
+//print(rex.age)
+//print(rex.result)
+//print(rex.name)
+//rex.changeResult(result: 8.88)
+//rex.changeName(name: "Ivan")
+//rex.changeAge(age: -273)
+//print(rex)
+//
+//var felix = Sprint(name: "Felix", age: -1, result: 9.999)
+//print(felix)
 
 
 
@@ -82,12 +83,16 @@ class Buildings {
     
 }
 
+
 // new structures "budda" and "rodinaMuther
-var budda = Memorial(name: "Budda", height: 70, inHonorOf: "Budda", date: 713)
-var rodinaMuther =  Memorial(name: "RodinaMuther", height: 85, inHonorOf: "WWII", date: 1967)
-// output in console
-print("\n\(budda), \n\(rodinaMuther)")
-print("height Budda: \(budda.height)m, \nRodinaMutherHonor of: \(rodinaMuther.inHonorOf)")
+//var budda = Memorial(name: "Budda", height: 70, inHonorOf: "Budda", date: 713)
+//var rodinaMuther =  Memorial(name: "RodinaMuther", height: 85, inHonorOf: "WWII", date: 1967)
+//// output in console
+//print("\n\(budda), \n\(rodinaMuther)")
+//print("height Budda: \(budda.height)m, \nRodinaMutherHonor of: \(rodinaMuther.inHonorOf)")
+
+// new structure "lenin"
+var lenin = Memorial(name: "Lenin", height: 5, inHonorOf: "Lenin", date: 1981)
 
 // new house
 var whiteHouse = House()
@@ -100,16 +105,8 @@ whiteHouse.quadrature = 650.45
 // output
 print(whiteHouse)
 
-// Memerial "Lenin" + building "White House"
+// объект структуры Memorial "Lenin" + объект структуры House "whiteHouse" == объект класса Buildings "leninHouse"
 var leninHouse = Buildings()
 leninHouse.house = whiteHouse()
-
-
-
-
-
-
-
-
 
 
