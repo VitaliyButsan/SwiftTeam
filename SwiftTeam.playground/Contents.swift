@@ -68,11 +68,18 @@ struct House {
     var quadrature = 0.00
 }
 
+//struct Memorial {
+//    var name = ""
+//    var height = 0
+//    var inHonorOf = ""  // "WWII"
+//    var date = 0000
+//}
+
 struct Memorial {
-    var name = ""
-    var height = 0
-    var inHonorOf = ""  // "WWII"
-    var date = 0000
+    var name: String!
+    var height: Int!
+    var inHonorOf: String!
+    var date: Int!
 }
 
 // new class
@@ -102,7 +109,7 @@ print(whiteHouse)
 
 // не созданный объект структуры Memorial "Lenin" + объект структуры House "whiteHouse" == объект класса Buildings "leninHouse"
 var leninHouse = Buildings()
-leninHouse.house = whiteHouse()
+leninHouse.house = whiteHouse
 
 
 
