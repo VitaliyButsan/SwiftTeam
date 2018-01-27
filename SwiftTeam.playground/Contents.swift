@@ -22,36 +22,36 @@
 // ===========================================================================
 // ===========================================================================
 
-
-struct Sprint {
-    var name: String
-    var age: Int
-    var result: Float
-    
-    mutating func changeResult(result: Float){
-        self.result = result
-    }
-    mutating func changeName(name: String){
-        self.name = name
-    }
-    mutating func changeAge(age: Int){
-        self.age = age
-    }
-    
-}
-
-var rex = Sprint(name: "Rex", age: 18, result: 8.98)
-print(rex.age)
-print(rex.result)
-print(rex.name)
-rex.changeResult(result: 8.88)
-rex.changeName(name: "Ivan")
-rex.changeAge(age: -273)
-print(rex)
-
-var felix = Sprint(name: "Felix", age: -1, result: 9.999)
-print(felix)
-
+//
+//struct Sprint {
+//    var name: String
+//    var age: Int
+//    var result: Float
+//
+//    mutating func changeResult(result: Float){
+//        self.result = result
+//    }
+//    mutating func changeName(name: String){
+//        self.name = name
+//    }
+//    mutating func changeAge(age: Int){
+//        self.age = age
+//    }
+//
+//}
+//
+//var rex = Sprint(name: "Rex", age: 18, result: 8.98)
+//print(rex.age)
+//print(rex.result)
+//print(rex.name)
+//rex.changeResult(result: 8.88)
+//rex.changeName(name: "Ivan")
+//rex.changeAge(age: -273)
+//print(rex)
+//
+//var felix = Sprint(name: "Felix", age: -1, result: 9.999)
+//print(felix)
+//
 
 
 // ============================================================================
@@ -60,24 +60,17 @@ print(felix)
 
 // create classes and structures
 struct House {
-    var name = ""
-    var height = 00.0
-    var floor = 0
-    var material = ""
-    var adres = ""
-    var quadrature = 0.00
+    var name: String!
+    var height: Float!
+    var floor: Int!
+    var material: String!
+    var adres: String!
+    var quadrature: Float!
 }
-
-//struct Memorial {
-//    var name = ""
-//    var height = 0
-//    var inHonorOf = ""  // "WWII"
-//    var date = 0000
-//}
 
 struct Memorial {
     var name: String!
-    var height: Int!
+    var height: Float!
     var inHonorOf: String!
     var date: Int!
 }
@@ -95,6 +88,7 @@ var rodinaMuther =  Memorial(name: "RodinaMuther", height: 85, inHonorOf: "WWII"
 // output in console
 print("\n\(budda), \n\(rodinaMuther)")
 print("height Budda: \(budda.height)m, \nRodinaMutherHonor of: \(rodinaMuther.inHonorOf)")
+var lenin = Memorial(name: "Lenin", height: 5.5, inHonorOf: "Lenina", date: 1981)
 
 // new house
 var whiteHouse = House()
@@ -110,7 +104,10 @@ print(whiteHouse)
 // не созданный объект структуры Memorial "Lenin" + объект структуры House "whiteHouse" == объект класса Buildings "leninHouse"
 var leninHouse = Buildings()
 leninHouse.house = whiteHouse
+leninHouse.memorial = lenin
 
+// Почему объект класса имеет такой вывод в консоли?
+print(leninHouse)
 
 
 
