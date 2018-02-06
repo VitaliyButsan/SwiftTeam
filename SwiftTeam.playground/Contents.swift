@@ -1,6 +1,5 @@
 
 // Third task
-
 struct Address {
     var town: String
     var index: Int
@@ -14,7 +13,10 @@ struct Creditcard {
 struct Person {
     var address: Address?
     var creditcard: Creditcard?
-    
+    init(address: Address?, creditcard: Creditcard?){
+        self.address = address
+        self.creditcard = creditcard
+    }
     func print() {
         print()   //TODO ...
     }
@@ -33,14 +35,23 @@ var purplePerson = Person(address: Address(town: "Montana", index: 59601), credi
 var personArray: [Person?] = []
 personArray.append(contentsOf: [redPerson, orangePerson, yellowPerson, greenPerson, bluePerson, sapphirinePerson, purplePerson])
 
-print(personArray)
+for (_, display) in personArray.enumerated() {
+    print(display!)
+}
 //print(redPerson.address?.town)
 //print(redPerson)
 
 
 
 //===========================================================================
+//  НАСТОЯТЕЛЬНАЯ ПРОСЬБА НЕ УДАЛЯТЬ ЗАКОММЕНТИРОВАННЫЙ КОД!
 //===========================================================================
+
+
+
+
+
+
 
 
 
@@ -157,10 +168,6 @@ print(personArray)
 //
 //// Почему объект класса имеет такой вывод в консоли?
 //print(leninHouse)
-
-
-
-
 
 
 
