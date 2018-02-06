@@ -13,10 +13,15 @@ struct Creditcard {
 struct Person {
     var address: Address?
     var creditcard: Creditcard?
-    init(address: Address?, creditcard: Creditcard?){
+    
+    init?(address: Address?, creditcard: Creditcard?) {
+        if address == nil || creditcard == nil {
+            return nil
+        }
         self.address = address
         self.creditcard = creditcard
     }
+    
     func print() {
         print()   //TODO ...
     }
@@ -30,13 +35,13 @@ var greenPerson = Person(address: Address(town: "Tokyo", index: 248), creditcard
 var bluePerson = Person(address: Address(town: "Washington", index: 25301), creditcard: Creditcard(number: 6621, CVV: 522))
 var sapphirinePerson = Person(address: Address(town: "Kansas", index: 66601), creditcard: Creditcard(number: 6690, CVV: 000))
 var purplePerson = Person(address: Address(town: "Montana", index: 59601), creditcard: Creditcard(number: 8204, CVV: 430))
-
+var oneMorePerson = Person(address: nil, creditcard: nil)
 // create array instance Person
 var personArray: [Person?] = []
-personArray.append(contentsOf: [redPerson, orangePerson, yellowPerson, greenPerson, bluePerson, sapphirinePerson, purplePerson])
+personArray.append(contentsOf: [redPerson, orangePerson, yellowPerson, greenPerson, bluePerson, sapphirinePerson, purplePerson, oneMorePerson])
 
-for (_, display) in personArray.enumerated() {
-    print(display!)
+for display in personArray{
+    print(display)
 }
 //print(redPerson.address?.town)
 //print(redPerson)
